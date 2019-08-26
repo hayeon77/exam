@@ -5,53 +5,58 @@ package kr.or.bit;
 
 
 /*
- ÇÔ¼ö(method): ±â´É, ÇàÀ§ÀÇ ÃÖ¼Ò ´ÜÀ§
- ex) ¸Ô´Ù, °È´Â´Ù, ÀÜ´Ù...
+ ï¿½Ô¼ï¿½(method): ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ö¼ï¿½ ï¿½ï¿½ï¿½ï¿½
+ ex) ï¿½Ô´ï¿½, ï¿½È´Â´ï¿½, ï¿½Ü´ï¿½...
  
- Å¬·¡½ºÀÇ ±¸¼º¿ä¼Ò: ÇÊµå+»ý¼ºÀÚ+ÇÔ¼ö
+ Å¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½Êµï¿½+ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½+ï¿½Ô¼ï¿½
  
- ex)°ÔÀÓ¹æ : °ÔÀÓ±â(µ¿Àü³Ö´Â) 1¹ø
-    ÀÎÇü»Ì±â(µ¿Àü³Ö°í...¹«Á¶°Ç ¹ÝÈ¯) 3¹ø
+ ex)ï¿½ï¿½ï¿½Ó¹ï¿½ : ï¿½ï¿½ï¿½Ó±ï¿½(ï¿½ï¿½ï¿½ï¿½ï¿½Ö´ï¿½) 1ï¿½ï¿½
+    ï¿½ï¿½ï¿½ï¿½ï¿½Ì±ï¿½(ï¿½ï¿½ï¿½ï¿½ï¿½Ö°ï¿½...ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¯) 3ï¿½ï¿½
  
-  ÇÔ¼öÀÇÁ¾·ù(4°¡Áö)
-  1. void, parameter(0) : void print(String str) {½ÇÇàÄÚµå}
-  2. void, parameter(x) : void print() {½ÇÇàÄÚµå}
+  ï¿½Ô¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½(4ï¿½ï¿½ï¿½ï¿½)
+  1. void, parameter(0) : void print(String str) {ï¿½ï¿½ï¿½ï¿½ï¿½Úµï¿½}
+  2. void, parameter(x) : void print() {ï¿½ï¿½ï¿½ï¿½ï¿½Úµï¿½}
   3. return Type, parameter(0) : int print(int data) {return 100}
   4. return Type, parameter(x) : int print() {return 200}
   
-  *void (µ¹·ÁÁÖ´Â °ÍÀÌ ¾ø´Ù) : return value°¡ ¾ø´Ù~
-  *return Type : {[8°¡Áö ±âº» Å¸ÀÔ] + String + ÂüÁ¶(°´Ã¼ÀÇ ÁÖ¼Ò)} + Array + Collection + Interface
-  **return Type ÀÖÀ¸¸é ¹Ýµå½Ã {ºí·°¾È¿¡´Â return Å°¿öµå Á¸ÀçÇØ¾ß ÇÑ´Ù}
-  *parameter(ÀÎÀÚ, ÀÎ¼ö) : µ¿Àü±¸¸Û(100¿øÂ¥¸®, 1000¿øÂ¥¸® ÁöÆó), µ¿Àü±¸¸Û ¿©·¯°³
+  *void (ï¿½ï¿½ï¿½ï¿½ï¿½Ö´ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½) : return valueï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½~
+  *return Type : {[8ï¿½ï¿½ï¿½ï¿½ ï¿½âº» Å¸ï¿½ï¿½] + String + ï¿½ï¿½ï¿½ï¿½(ï¿½ï¿½Ã¼ï¿½ï¿½ ï¿½Ö¼ï¿½)} + Array + Collection + Interface
+  **return Type ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ýµï¿½ï¿½ {ï¿½ï¿½ï¿½È¿ï¿½ï¿½ï¿½ return Å°ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ø¾ï¿½ ï¿½Ñ´ï¿½}
+  *parameter(ï¿½ï¿½ï¿½ï¿½, ï¿½Î¼ï¿½) : ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½(100ï¿½ï¿½Â¥ï¿½ï¿½, 1000ï¿½ï¿½Â¥ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½), ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
   
-  ÇÔ¼ö´Â ¹Ýµå½Ã È£Ãâ(Call)µÇ¾î¾ß¸¸ ½ÇÇàµÈ´Ù : ´©±º°¡±×ÀÇ ÀÌ¸§À» ºÒ·¯ÁÖ¾úÀ»¶§......
+  ï¿½Ô¼ï¿½ï¿½ï¿½ ï¿½Ýµï¿½ï¿½ È£ï¿½ï¿½(Call)ï¿½Ç¾ï¿½ß¸ï¿½ ï¿½ï¿½ï¿½ï¿½È´ï¿½ : ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¸ï¿½ï¿½ï¿½ ï¿½Ò·ï¿½ï¿½Ö¾ï¿½ï¿½ï¿½ï¿½ï¿½......
   
  */
 public class ex03_method {
-    public int data;
-    
-    public void m() { //ÇÔ¼öÀÇ ÀÌ¸§ÀÌ³ª º¯¼öÀÇ ÀÌ¸§Àº ÀÇ¹ÌÀÖ´Â ´Ü¾îÀÇ Á¶ÇÕ
-	System.out.println("ÀÏ¹ÝÇÔ¼ö:void, parameter(x)");
-		
+//    public int data;
+//    
+//    public void m() { //ï¿½Ô¼ï¿½ï¿½ï¿½ ï¿½Ì¸ï¿½ï¿½Ì³ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¸ï¿½ï¿½ï¿½ ï¿½Ç¹ï¿½ï¿½Ö´ï¿½ ï¿½Ü¾ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+//	System.out.println("ï¿½Ï¹ï¿½ï¿½Ô¼ï¿½:void, parameter(x)");
+//		
+//	}
+//    
+//    
+//    public void m2(int i) {
+//    	System.out.println("parameter value (scope ï¿½Ô¼ï¿½ï¿½ï¿½ï¿½ï¿½:" +i);
+//    	System.out.println("ï¿½Ï¹ï¿½ï¿½Ô¼ï¿½:void, parameter(0)");
+//    }
+//    
+//    public int m3() {
+//    	return 100; 
+//    }
+//    
+//    public int m4(int data) {
+//    return data +1;    
+//    }
+//    
+//    //È®ï¿½ï¿½(parameter ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È­)
+//    public int sum(int i, int j, int k) {
+//		return k;
+//    	
+//    }
+	
+	public static void main(String[] args) {
+		Clothes c= new Clothes("", "", 1);
+		c.sale();
 	}
-    
-    
-    public void m2(int i) {
-    	System.out.println("parameter value (scope ÇÔ¼ö³»ºÎ:" +i);
-    	System.out.println("ÀÏ¹ÝÇÔ¼ö:void, parameter(0)");
-    }
-    
-    public int m3() {
-    	return 100; 
-    }
-    
-    public int m4(int data) {
-    return data +1;    
-    }
-    
-    //È®Àå(parameter °³¼öÀÇ º¯È­)
-    public int sum(int i, int j, int k) {
-		return k;
-    	
-    }
 }
