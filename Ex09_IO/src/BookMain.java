@@ -13,10 +13,10 @@ public class BookMain {
 
 	public static void main(String[] args) {
 
-		// BookManager bm = new BookManager();
+		 BookManager bm = new BookManager();
 
-		// bm.Run();
-
+		 bm.Run();
+/*
 		// 파일저장
 		FileReader fr = null;
 		FileWriter fw = null;
@@ -46,35 +46,7 @@ public class BookMain {
 
 		}
 
-		//문자열을 파일에 저장
-		File file = new File("C:\\test\\test.txt");
-		FileWriter fw1 = null;
-		try {
-			fw1 = new FileWriter(file, true);
-		} catch (IOException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
-		}
-		try {
-			fw1.write("FileWriter는 한글로된"+"\r\n");
-		} catch (IOException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
-		}
-				try {
-					fw.flush();
-				} catch (IOException e1) {
-					// TODO Auto-generated catch block
-					e1.printStackTrace();
-				}
-				try {
-					fw.close();
-				} catch (IOException e1) {
-					// TODO Auto-generated catch block
-					e1.printStackTrace();
-				}
-				System.out.println("파일에 저장되었습니다.");
-		
+
 // 파일 읽기
 
 		try {
@@ -89,6 +61,6 @@ public class BookMain {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-
+*/
 	}
 }

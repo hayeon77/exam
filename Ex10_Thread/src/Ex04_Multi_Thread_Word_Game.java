@@ -21,7 +21,7 @@ public class Ex04_Multi_Thread_Word_Game {
 		WordTime timer = new WordTime();
 		timer.start();
 		
-		String inputdata = JOptionPane.showInputDialog("김덕기 몸무게를 입력해주세요");
+		String inputdata = JOptionPane.showInputDialog("값을 입력해주세요");
 		System.out.println("입력값:"+inputdata);
 
 	}
